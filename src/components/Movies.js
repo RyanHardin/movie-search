@@ -14,7 +14,23 @@ const Movies = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  return movies && movies.map((movie) => <Film movie={movie} />);
+  const display =
+    movies &&
+    movies.map((movie) => (
+      <div style={styles.movies} key={movie.id}>
+        <Film movie={movie} />
+      </div>
+    ));
+  return display;
+};
+
+const styles = {
+  movies: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    width: "300px",
+  },
 };
 
 export default Movies;
