@@ -1,9 +1,10 @@
 import React from "react";
 import Movies from "./components/Movies";
+import Header from "./components/Header";
 const App = () => {
   return (
     <div style={styles.container}>
-      <h1 style={styles.header}>Movies Now Playing</h1>
+      <Header title="Movies Now Playing" />
       <Movies />
     </div>
   );
@@ -14,16 +15,6 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-  },
-  moviesContainer: {
-    display: "flex",
-    justifyContent: "space-evenly",
-    flexWrap: "wrap",
-  },
-  header: {
-    marginBottom: "auto",
-    textAlign: "center",
-    color: "#575761",
   },
 };
 
