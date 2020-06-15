@@ -6,7 +6,7 @@ const App = () => {
     <div className="App">
       <table
         style={{
-          backgroundColor: "#000",
+          backgroundColor: "#020202",
           display: "block",
           height: "150px",
           padding: "15px",
