@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Film from "./Film";
 import Search from "./Search";
+import "../css/Movies.css";
+import { filter } from "../utils/filter";
 require("dotenv").config();
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState("");
+  const display = filter(movies, input);
 
   useEffect(() => {
     axios
@@ -17,35 +20,12 @@ const Movies = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  const display = movies.filter((movie) => movie.title.toLowerCase().includes(input.toLowerCase()));
-
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <Search onChange={(value) => setInput(value)} />
-      <div style={styles.moviesContainer}>
-        {display &&
-          display.map((movie) => (
-            <div style={styles.movies} key={movie.id}>
-              <Film movie={movie} />
-            </div>
-          ))}
-      </div>
+      <Film movies={display} />
     </div>
   );
-};
-
-const styles = {
-  moviesContainer: {
-    display: "flex",
-    justifyContent: "space-evenly",
-    flexWrap: "wrap",
-  },
-  movies: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    width: "300px",
-  },
 };
 
 export default Movies;
