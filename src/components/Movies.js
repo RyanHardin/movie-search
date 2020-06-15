@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Film from "./Film";
+import Films from "./Films";
 import Search from "./Search";
 import "../css/Movies.css";
 import { filter } from "../utils/filter";
@@ -23,7 +23,7 @@ const Movies = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <Search onChange={(value) => setInput(value)} />
-      <Film movies={display} />
+      <Films movies={display} />
     </div>
   );
 };
