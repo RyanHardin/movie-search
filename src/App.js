@@ -13,7 +13,13 @@ const App = () => {
         }}>
         <tbody>
           <tr>
-            <td></td>
+            <td>
+              <img
+                src="https://www.svgrepo.com/show/193912/video-player-movie.svg"
+                alt="alt icon"
+                style={{ width: 50, height: 50 }}
+              />
+            </td>
             <td style={{ color: "#fff", paddingLeft: 16 }}>
               <h1>MovieDB Search</h1>
             </td>
