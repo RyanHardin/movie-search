@@ -1,0 +1,44 @@
+.header {
+  text-align: center;
+  color: #575761;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  max-width: 90%;
+}
+
+.filmContainer:hover {
+  margin: 10px;
+  border-radius: 20px;
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.filmContainer {
+  background-color: #f2f3f4;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+  padding: 25px;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: inherit;
+}
+
+p {
+  text-align: justify;
+}

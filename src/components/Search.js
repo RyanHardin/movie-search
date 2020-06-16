@@ -2,14 +2,12 @@ import React from "react";
 
 const Search = ({ onChange }) => {
   return (
-    <div style={{ margin: "25px" }}>
-      <input
-        type="text"
-        style={{ height: "50px", fontSize: "larger", padding: "0px 20px", borderRadius: "5px" }}
-        placeholder="Movies..."
-        onChange={(event) => onChange(event.target.value)}
-      />
-    </div>
+    <input
+      type="text"
+      style={{ fontSize: 24, display: "block", width: "99%", padding: "8, 0, 8, 16" }}
+      placeholder="Enter search term"
+      onChange={(event) => onChange(event.target.value)}
+    />
   );
 };
 
