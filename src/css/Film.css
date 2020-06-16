@@ -13,7 +13,7 @@ img {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  width: 80%;
+  max-width: 90%;
 }
 
 .filmContainer:hover {

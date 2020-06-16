@@ -8,14 +8,13 @@ const App = () => {
         style={{
           backgroundColor: "#020202",
           display: "block",
-          height: "150px",
-          padding: "15px",
-          fontSize: "24px",
+          fontSize: 24,
+          paddingLeft: 16,
         }}>
         <tbody>
           <tr>
             <td></td>
-            <td style={{ color: "#fff", paddingLeft: "16px" }}>
+            <td style={{ color: "#fff", paddingLeft: 16 }}>
               <h1>MovieDB Search</h1>
             </td>
           </tr>
