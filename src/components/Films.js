@@ -2,6 +2,10 @@ import React from "react";
 import "../css/Film.css";
 
 const Films = ({ movies }) => {
+  const handleView = (movie) => {
+    window.location.href = `https://www.themoviedb.org/movie/${movie.id}-${movie.title}`;
+  };
+
   const list = movies.map((movie) => (
     <div className={"filmContainer"} key={movie.id}>
       <div>
@@ -13,6 +17,10 @@ const Films = ({ movies }) => {
         <br />
         <label>Popularity: {movie.popularity}</label>
         <p>{movie.overview}</p>
+        <div>
+          <button style={{ margin: 10, color: "white", backgroundColor: "green", borderRadius: "5px" }}>Play</button>
+          <button onClick={() => handleView(movie)}>View</button>
+        </div>
       </div>
     </div>
   ));
