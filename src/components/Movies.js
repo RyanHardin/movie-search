@@ -17,6 +17,7 @@ const Movies = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <Search onChange={(value) => setInput(value)} />
+      <h1>Sharing a list of movies now playing</h1>
       <Films movies={display} />
     </div>
   );
